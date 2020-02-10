@@ -46,7 +46,8 @@ Note: With the `--rm` option in the docker run command the container is deleted 
 
 #### Step 3: Move on with Verify Access to OpenShift on the IBM Cloud
 
->Option 1 (prefered for Windows): Prebuilt Image with Code in Container There is an image on DockerHub with all required tools. This option works for Mac, Linux and Windows. To get started as quickly as possible, use this image.
+>#### Option 1 (prefered for Windows)
+>Prebuilt Image with Code in Container There is an image on DockerHub with all required tools. This option works for Mac, Linux and Windows. To get started as quickly as possible, use this image.
 >
 >Step 1: Run this command in a terminal
 >
