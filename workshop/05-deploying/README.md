@@ -46,50 +46,48 @@ Note: With the `--rm` option in the docker run command the container is deleted 
 
 #### Step 3: Move on with Verify Access to OpenShift on the IBM Cloud
 
-##### Option 1
+>Option 1 (prefered for Windows): Prebuilt Image with Code in Container There is an image on DockerHub with all required tools. This option works for Mac, Linux and Windows. To get started as quickly as possible, use this image.
+>
+>Step 1: Run this command in a terminal
+>
+>```bash
+>$ docker run -ti nheidloff/openshift-workshop-tools:v1
+>```
+>Step 2: After the container has been started, run these commands inside your running Docker image to get the lastest version of the workshop: You should see the prompt like this
+>
+>```bash
+>root@3f46c41f7303:/usr/local/bin#
+>```
+>now run the following instructions:
+>
+>```bash
+>$ cd
+>$ git clone https://github.com/IBM/openshift-on-ibm-cloud-workshops.git$ cd openshift-on-ibm-cloud-workshops
+>$ ROOT_FOLDER=$(pwd)
+>```
+>*Note:* If you using Windows you also need to download or clone the project to your local workstation for the upcoming Docker and Java lab, because you can't use Docker in the 'openshift-workshop-tools' Docker image.
+>
+>Step 3: Move on with Verify Access to OpenShift on the IBM Cloud
+>
+>#### Option 2
+>
+>Install Tools locally on your desktop computer This approach works only for Mac and Linux.
+>
+>Step 1: Install the following tools: oc kubectl git curl Optional: IBM Cloud CLI Optional: Editor, for example Visual Studio Code
+>
+>Step 2: Get the code:
+>
+>```bash
+>$ git clone https://github.com/IBM/openshift-on-ibm-cloud-workshops.git
+>$ cd openshift-on-ibm-cloud-workshops
+>$ ROOT_FOLDER=$(pwd)
+>```
+>
+>Step 3: Move on with Verify Access to OpenShift on the IBM Cloud
 
-(prefered for Windows): Prebuilt Image with Code in Container There is an image on DockerHub with all required tools. This option works for Mac, Linux and Windows. To get started as quickly as possible, use this image.
+### Verify Access to OpenShift on the IBM Cloud
 
-Step 1: Run this command in a terminal
-
-```bash
-$ docker run -ti nheidloff/openshift-workshop-tools:v1
-```
-Step 2: After the container has been started, run these commands inside your running Docker image to get the lastest version of the workshop: You should see the prompt like this
-
-```bash
-root@3f46c41f7303:/usr/local/bin#
-```
-now run the following instructions:
-
-```bash
-$ cd
-$ git clone https://github.com/IBM/openshift-on-ibm-cloud-workshops.git$ cd openshift-on-ibm-cloud-workshops
-$ ROOT_FOLDER=$(pwd)
-```
-*Note:* If you using Windows you also need to download or clone the project to your local workstation for the upcoming Docker and Java lab, because you can't use Docker in the 'openshift-workshop-tools' Docker image.
-
-Step 3: Move on with Verify Access to OpenShift on the IBM Cloud
-
-#### Option 2
-
-Install Tools locally on your desktop computer This approach works only for Mac and Linux.
-
-Step 1: Install the following tools: oc kubectl git curl Optional: IBM Cloud CLI Optional: Editor, for example Visual Studio Code
-
-Step 2: Get the code:
-
-```bash
-$ git clone https://github.com/IBM/openshift-on-ibm-cloud-workshops.git
-$ cd openshift-on-ibm-cloud-workshops
-$ ROOT_FOLDER=$(pwd)
-```
-
-Step 3: Move on with Verify Access to OpenShift on the IBM Cloud
-
-## Verify Access to OpenShift on the IBM Cloud
-
-###  Step 1: After you've created a new cluster, open the OpenShift console.
+####  Step 1: After you've created a new cluster, open the OpenShift console.
 
 - Logon to the IBM Cloud web console - and choose the IBM organization
 - Select OpenShift in the menu
@@ -102,7 +100,7 @@ Step 3: Move on with Verify Access to OpenShift on the IBM Cloud
 
 ![Open OpenShift Web Console](../.gitbook/assets/assets_-LtBxDkdPh1ZKmLAzW5v_-Lti3mCtmtRafh0nR9de_-Lti8EKcrm5FB-OaYbdN_image.png)
 
-###  Step 2: Get our access token for the 'oc' CLI.
+####  Step 2: Get our access token for the 'oc' CLI.
 
 - From the dropdown menu in the upper right of the page, click 'Copy Login Command'. Paste the copied command into your terminal.
 
